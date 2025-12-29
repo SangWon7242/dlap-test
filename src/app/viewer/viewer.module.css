@@ -1,0 +1,152 @@
+/* 공통 카드 스타일 */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.card {
+  width: 320px;
+  text-align: center;
+  padding: 30px 20px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.avatar {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 20px;
+  position: relative;
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* === Theme 1: NEON (Cyberpunk) === */
+.neon {
+  background: #000;
+  color: #fff;
+}
+.neon .card {
+  border: 2px solid #0f0;
+  box-shadow: 0 0 15px #0f0;
+  background: #111;
+  border-radius: 10px;
+}
+.neon .avatar {
+  border: 2px solid #0ff;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #0ff;
+  background: #222;
+  overflow: hidden;
+}
+.neon h1 {
+  color: #fff;
+  text-shadow: 2px 2px 0 #0f0;
+  font-size: 2.5rem;
+  margin: 10px 0;
+}
+.neon p {
+  color: #0ff;
+  letter-spacing: 2px;
+}
+.neon .btn {
+  border: 1px solid #0f0;
+  color: #0f0;
+  background: transparent;
+}
+
+/* === Theme 2: PIXEL (Retro Game) === */
+.pixel {
+  background: #ffcc00;
+}
+.pixel .card {
+  background: #fff;
+  border: 4px solid #000;
+  box-shadow: 8px 8px 0 #000;
+  border-radius: 0;
+}
+.pixel .avatar {
+  border: 4px solid #000;
+  background: #eee;
+  border-radius: 0;
+}
+.pixel h1 {
+  font-size: 2.2rem;
+  margin: 15px 0;
+  color: #333;
+}
+.pixel p {
+  color: #d63384;
+  font-size: 0.9rem;
+}
+.pixel .btn {
+  background: #000;
+  color: #fff;
+  box-shadow: 4px 4px 0 #aaa;
+  border: none;
+}
+
+/* === Theme 3: MAGIC (Fantasy) === */
+.magic {
+  background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%);
+}
+.magic .card {
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 30px;
+  border: 5px solid #fff;
+  box-shadow: 0 10px 25px rgba(100, 100, 255, 0.2);
+}
+.magic .avatar {
+  border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+  border: 3px solid #fff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  overflow: hidden;
+  animation: morph 3s ease-in-out infinite;
+}
+.magic h1 {
+  color: #6a11cb;
+  font-size: 2.8rem;
+  margin: 10px 0;
+}
+.magic p {
+  color: #2575fc;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.magic .btn {
+  background: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+  color: #fff;
+  border-radius: 50px;
+  border: none;
+}
+
+@keyframes morph {
+  0%,
+  100% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+  50% {
+    border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+  }
+}
+
+/* 버튼 공통 */
+.btn {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  margin-top: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+}
